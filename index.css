@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('image.jpg');
+    border-radius: 17px;
+
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #a0adb2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #505354;;
+}
+
+.balance {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.balance h2 {
+    color: #505354;;
+}
+
+.income-expense {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.add-income, .add-expense {
+    text-align: left;
+    padding: 10px;
+    background-color: #dbe5e9;;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    margin-top: 25px;
+
+}
+
+.add-income h3, .add-expense h3 {
+    font-size: 18px;
+    color: #4592c1;;
+}
+
+.add-income:hover, .add-expense:hover {
+    transform: scale(1.02);
+}
+
+input, button {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 88%;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+button {
+    background-color: #4592c1;;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+    width: 100% !important;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+history {
+    text-align: left;
+    margin-top: 20px;
+}
+
+#transaction-list {
+    list-style: none;
+    padding: 0;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.transaction.income {
+    border-left: 5px solid #4CAF50;
+}
+
+.transaction.expense {
+    border-left: 5px solid #FF5722;
+}
+.my-Transaction{
+    color: #505354;
+}
+
+/* Media Query for 320px responsiveness */
+@media (max-width: 320px) {
+    .container {
+        padding: 10px;
+    }
+
+    .income-expense {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .add-income, .add-expense {
+        width: 100%;
+    }
+
+    input, button {
+        width: 92%;
+    }
+}
